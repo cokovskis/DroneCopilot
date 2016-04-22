@@ -1,0 +1,5 @@
+c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilotServices\bin\Debug\DroneCopilotServices.dll
+c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilotServices\bin\Debug\DroneCopilotServices.pdb
+c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilotServices\obj\Debug\DroneCopilotServices.csprojResolveAssemblyReference.cache
+c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilotServices\obj\Debug\DroneCopilotServices.dll
+c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilotServices\obj\Debug\DroneCopilotServices.pdb
