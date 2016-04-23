@@ -42,9 +42,4 @@ function showError(error) {
 }
 
 getLocation();
-getLocation();
-getLocation();
-getLocation();
-getLocation();
-getLocation();
 
