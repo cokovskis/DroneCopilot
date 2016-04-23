@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="DroneCopilot" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^c:\\users\\andrej\\documents\\visual\ studio\ 2015\\Projects\\DroneCopilot_MVC\\DroneCopilot_MVC\\obj\\Debug\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^c:\\users\\andrej\\documents\\visual\ studio\ 2015\\Projects\\DroneCopilot_MVC\\DroneCopilot_MVC\\obj\\Debug\\Package\\PackageTmp$" />
+  </parameter>
+</parameters>

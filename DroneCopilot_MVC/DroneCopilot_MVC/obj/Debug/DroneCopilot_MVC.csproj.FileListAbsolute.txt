@@ -15,6 +15,7 @@ c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopi
 c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilot_MVC\bin\DroneCopilot_MVC.dll
 c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilot_MVC\bin\DroneCopilot_MVC.pdb
 c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilot_MVC\bin\Antlr3.Runtime.dll
+c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilot_MVC\bin\DroneCopilotServices.dll
 c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilot_MVC\bin\Microsoft.AI.Agent.Intercept.dll
 c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilot_MVC\bin\Microsoft.AI.DependencyCollector.dll
 c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilot_MVC\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -33,6 +34,7 @@ c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopi
 c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilot_MVC\bin\System.Web.WebPages.dll
 c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilot_MVC\bin\System.Web.WebPages.Razor.dll
 c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilot_MVC\bin\WebGrease.dll
+c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilot_MVC\bin\DroneCopilotServices.pdb
 c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilot_MVC\bin\Microsoft.AI.DependencyCollector.xml
 c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilot_MVC\bin\Microsoft.AI.ServerTelemetryChannel.xml
 c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilot_MVC\bin\Microsoft.AI.Web.xml
@@ -51,5 +53,3 @@ c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopi
 c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilot_MVC\obj\Debug\DroneCopilot_MVC.csprojResolveAssemblyReference.cache
 c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilot_MVC\obj\Debug\DroneCopilot_MVC.dll
 c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilot_MVC\obj\Debug\DroneCopilot_MVC.pdb
-c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilot_MVC\bin\DroneCopilotServices.dll
-c:\users\andrej\documents\visual studio 2015\Projects\DroneCopilot_MVC\DroneCopilot_MVC\bin\DroneCopilotServices.pdb

@@ -1,8 +1,8 @@
-﻿var x = document.getElementById("myMap");
+﻿//var x = document.getElementById("myMap");
 
 var startPos;
   var geoOptions = {
-    enableHighAccuracy: true
+      enableHighAccuracy: true
   }
 
 function getLocation() {
@@ -15,19 +15,13 @@ function getLocation() {
     }
 }
 
-function showPosition(position) {
-    /*
-    x.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude;
-    */
-
-}
 
 //Replacement for showPosition(position)
   var geoSuccess = function(position) {
-    startPos = position;
-    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
-    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+      startPos = position;
+      console.log("Position" + startPos.coords.latitude + " " + startPos.coords.longitude);
+    //document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    //document.getElementById('startLon').innerHTML = startPos.coords.longitude;
   };
 
 function showError(error) {
@@ -46,3 +40,11 @@ function showError(error) {
             break;
     }
 }
+
+getLocation();
+getLocation();
+getLocation();
+getLocation();
+getLocation();
+getLocation();
+

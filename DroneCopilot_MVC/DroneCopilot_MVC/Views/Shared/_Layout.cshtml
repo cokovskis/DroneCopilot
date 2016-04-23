@@ -1,22 +1,15 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <!--<meta charset="utf-8" />-->
-
     <!-- BING MAPS STUFF! -->
     <!-- BING MAPS API Key: ArWZIz4IM2XQFf8gG1WzQMsdjVxubILEA6RSd96MqVnMqbX2g4Ov_VDBL_D4hlz_ -->
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
-    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
-    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=getMap' async defer></script>
-    <script type='text/javascript'>
-            function getMap() {
-                    var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
-                        credentials: 'ArWZIz4IM2XQFf8gG1WzQMsdjVxubILEA6RSd96MqVnMqbX2g4Ov_VDBL_D4hlz_'
-                    });
-                }
+    <script type="text/javascript" src="~/Scripts/Geolocation.js"></script>
+    <script type="text/javascript" src="~/Scripts/no-fly.js"></script>
+    <script type="text/javascript" src="~/Scripts/powerplants.js"></script>
+    <script type="text/javascript" src="~/Scripts/military.js"></script>
 
-    </script>
-
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=getMap' ></script> <!-- async defer -->
 
     <!-- /BING MAPS STUFF! -->
 
@@ -24,9 +17,11 @@
     <title>@ViewBag.Title - Your drone/multicopter co-pilot</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+
 </head>
-<body onload="getMap();">
-    <div class="navbar navbar-inverse navbar-fixed-bottom">
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-bottom" id="navbar-menu">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -36,7 +31,7 @@
                 </button>
                 @Html.ActionLink("Drone Copilot", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse" >
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Map", "Index", "Home")</li>
                     <li>@Html.ActionLink("Data", "Data", "Home")</li>
@@ -46,7 +41,67 @@
         </div>
     </div>
     <!--<div class="container body-content">-->
-        @RenderBody()
+            @RenderBody()
+    <script type="text/javascript" src="~/Scripts/Geolocation.js"></script>
+   <script type="text/javascript">
+
+       if (navigator.geolocation) {
+           //navigator.geolocation.watchPosition(showPosition,showError); //Andrejs Code
+           // navigator.geolocation.getCurrentPosition(showPosition, showError);
+           navigator.geolocation.getCurrentPosition(geoSuccess, showError, geoOptions); //Cryptos Code
+       } else {
+           alert("You must allow location services to automatically position the map.");
+       }
+
+       // THIS WORKS. DON'T ASK
+        console.log("Kompir: " + document.getElementById("navbar-menu").getAttribute("height"));
+        document.getElementById("map-container").setAttribute("style", "height: " + (parseInt(window.innerHeight) - document.getElementById("navbar-menu").getAttribute("height") - 50) + "px; width: " + window.innerWidth + "px;");
+
+    </script>
+    
+
+    <script type='text/javascript'>
+        function getMap() {
+            getLocation();
+            console.log("Position" + startPos.coords.latitude + " " + startPos.coords.longitude); //spukuva
+
+                    var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
+                        credentials: 'ArWZIz4IM2XQFf8gG1WzQMsdjVxubILEA6RSd96MqVnMqbX2g4Ov_VDBL_D4hlz_',
+                        center: new Microsoft.Maps.Location(startPos.coords.latitude, startPos.coords.longitude),
+                        zoom: 15,
+                        mapTypeId: Microsoft.Maps.MapTypeId.aerial
+                    });
+
+
+                    Microsoft.Maps.loadModule('Microsoft.Maps.GeoJson', function () {
+                        var featureCollection = Microsoft.Maps.GeoJson.read(noFly);
+                        for (var i = 0; i < featureCollection.length; i++) {
+                            map.entities.push(featureCollection[i]);
+                        }
+                    });
+
+
+                    Microsoft.Maps.loadModule('Microsoft.Maps.GeoJson', function () {
+                        var featureCollection = Microsoft.Maps.GeoJson.read(powerPlants);
+                        for (var i = 0; i < featureCollection.length; i++) {
+                            map.entities.push(featureCollection[i]);
+                        }
+                    });
+
+
+
+                    Microsoft.Maps.loadModule('Microsoft.Maps.GeoJson', function () {
+                        var featureCollection = Microsoft.Maps.GeoJson.read(militaryUS, { polygonOptions: { fillColor: 'rgba(255, 0, 0, 0.5)' } }
+);
+                        for (var i = 0; i < featureCollection.length; i++) {
+                            map.entities.push(featureCollection[i]);
+                        }
+                    });
+
+
+                }
+    </script>
+    <!--
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - DroneCopilot for web.<br />
@@ -54,11 +109,12 @@
             DroneCopilot is a solution to the challenge <a href="http://2016.spaceappschallenge.org/challenges/aero/dont-crash-my-drone" target="_blank">Don't crash my drone</a> at <a href="http://2016.spaceappschallenge.org/"  target="_blank">2016 NASA Space Apps Challenge</a>.
             </p>
         </footer>
+    
+    -->
     <!--</div>-->
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/Scripts/Geolocation.js")
+
     @RenderSection("scripts", required: false)
 </body>
 </html>
