@@ -1,10 +1,16 @@
 ﻿var x = document.getElementById("myMap");
 
+var startPos;
+  var geoOptions = {
+    enableHighAccuracy: true
+  }
+
 function getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.watchPosition(showPosition,showError);
+        //navigator.geolocation.watchPosition(showPosition,showError); //Andrejs Code
         // navigator.geolocation.getCurrentPosition(showPosition, showError);
-    } else { 
+		navigator.geolocation.getCurrentPosition(geoSuccess, showError, geoOptions); //Cryptos Code
+	} else { 
         alert("You must allow location services to automatically position the map.");
     }
 }
@@ -16,6 +22,13 @@ function showPosition(position) {
     */
 
 }
+
+//Replacement for showPosition(position)
+  var geoSuccess = function(position) {
+    startPos = position;
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+  };
 
 function showError(error) {
     switch (error.code) {
