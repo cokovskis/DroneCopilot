@@ -1,0 +1,23 @@
+NASA SPACE APPS CHALLENGE 2016
+SKOPJE, MACEDONIA
+
+LINKS:
+
+http://openweathermap.org/current
+http://openweathermap.org/current#current_JSON
+https://www.microsoft.com/maps/choose-your-bing-maps-API.aspx
+http://stackoverflow.com/questions/13200381/asp-net-mvc-4-application-calling-remote-webapi
+http://www.asp.net/signalr
+https://msdn.microsoft.com/en-GB/library/jj819168.aspx
+http://www.codeproject.com/Tips/497123/How-to-make-REST-requests-with-Csharp
+http://leafletjs.com/index.html
+https://www.microsoft.com/maps/create-a-bing-maps-key.aspx
+https://www.bingmapsportal.com/announcement
+http://jsfiddle.net/shibualexis/yVhgM/3/
+https://msdn.microsoft.com/en-us/library/mt712556.aspx
+https://msdn.microsoft.com/en-us/library/gg427624.aspx
+https://msdn.microsoft.com/en-us/library/mt712817.aspx
+https://msdn.microsoft.com/en-us/library/gg427624.aspx
+http://www.w3schools.com/html/html5_geolocation.asp
+http://www.bing.com/api/maps/sdk/mapcontrol/isdk#createPushpinFromSvg+JS
+https://msdn.microsoft.com/en-us/library/ff701713.aspx
